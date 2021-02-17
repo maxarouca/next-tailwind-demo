@@ -1,65 +1,39 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    <div className="flex flex-col lg:flex-row h-screen">
+      <main className="w-screen lg:w-4/7 h-screen flex flex-col lg:flex-row justify-center items-center lg:bg-bg-pattern bg-cover bg-center bg-no-repeat">
+        <div className="w-screen lg:w-1/2 h-screen lg:h-auto font-sans">
+          <img
+            src="images/logo.svg"
+            alt="Logo"
+            className="m-8 lg:ml-0 lg:mb-36 "
+          />
+          <img
+            src="images/hero-mobile.jpg"
+            alt="Hero image"
+            className="w-full lg:hidden"
+          />
+          <h1 className="mb-9 mt-12 lg:text-6xl text-4xl lg:w-1/2 text-center uppercase leading-tight text-dark tracking-widest font-semibold">
+            <span className="text-light font-light">We're</span> coming soon
+          </h1>
+          <p className="px-9 lg:px-0 text-light mb-9">
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
+          <div className="relative flex flex-row px-9 lg:px-0 w-full">
+            <input
+              type="text"
+              placeholder="Email Address"
+              className="border border-light rounded-full h-14 w-full p-4 pr-24 placeholder-light focus:border-soft focus:border-2 focus:outline-none"
+            />
+            <button className="bg-gradient-to-r from-light to-soft absolute flex flex-row justify-center right-9 lg:right-0 h-14 w-20 py-4 px-7 rounded-full focus:outline-none hover:opacity-80 transition-opacity hover:shadow-xl ">
+              <img src="images/icon-arrow.svg" alt="Icon arrow button" />
+            </button>
+          </div>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      <div className="hidden lg:block bg-hero-background bg-cover bg-center bg-no-repeat w-3/5"></div>
     </div>
-  )
+  );
 }
